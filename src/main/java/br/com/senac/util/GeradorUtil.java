@@ -41,6 +41,12 @@ public class GeradorUtil {
         mascara.setValueContainsLiteralCharacters(false);
         return mascara.valueToString(gerarNumero(14));
     }
+    
+    public static String gerarRg() throws ParseException{
+        MaskFormatter mascara = new MaskFormatter("##.###.###-#");
+        mascara.setValueContainsLiteralCharacters(false);
+        return mascara.valueToString(gerarNumero(9));
+    }
 
     public static String gerarTelefoneFixo() {
         return "(48)3" + gerarNumero(3) + "-" + gerarNumero(4);
